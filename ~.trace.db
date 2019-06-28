@@ -1,0 +1,15 @@
+2019-06-27 15:39:53 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Table "PROJECT" not found; SQL statement:
+select * from Project where upper(NAME) like ? order by ID ASC [42102-196]
+2019-06-27 15:39:53 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLException: Table "PROJECT" not found; SQL statement:
+select p.* from Project p join Employee_Project_Map epm on p.ID = epm.PROJECTID where epm.EMPLOYEEID = ? order by p.ID ASC [42102-196]
+2019-06-27 15:39:53 jdbc[5]: exception
+org.h2.jdbc.JdbcSQLException: Table "PROJECT" not found; SQL statement:
+update Project set NAME = ?, DESCRIPTION = ? where ID = ? [42102-196]
+2019-06-27 15:39:53 jdbc[6]: exception
+org.h2.jdbc.JdbcSQLException: Table "PROJECT" not found; SQL statement:
+select * from Project where ID = ? [42102-196]
+2019-06-27 15:39:53 jdbc[7]: exception
+org.h2.jdbc.JdbcSQLException: Table "PROJECT" not found; SQL statement:
+insert into project (NAME, DESCRIPTION) VALUES (?,?) [42102-196]
