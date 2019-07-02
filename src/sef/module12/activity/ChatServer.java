@@ -27,16 +27,17 @@ public class ChatServer {
 			int i = 0;
 			while(endless){
 				client = server.accept();
-				
+
 				System.out.println("Got a connection from " + client.getInetAddress());
-				
-				User user = new User("user_" + i++, client.getInputStream());
-				
-				Thread thread = new Thread(user);
-				thread.start();
-				
+
+				User user = new User("user_" + i++, client.getInputStream(),client.getOutputStream());
+				Chat.CHAT.addUser(user);
+				Thread thread2 = new Thread(user);
+				thread2.start();
+
 				out = new PrintWriter(client.getOutputStream(), true);
 				out.println("You have reached server " + client.getInetAddress() + " Have a nice day!");
+
 			}
 		} catch (IOException e) {
 			e.printStackTrace();

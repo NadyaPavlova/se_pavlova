@@ -18,6 +18,7 @@ public class
 	}
 	
 	public void addUser(User user) {
+
 		this.users.add(user);
 	}
 	
@@ -25,11 +26,15 @@ public class
 		if (!this.users.contains(user)) {
 			this.users.add(user);
 			System.out.println("User " + user.getName() + " loggon" + System.lineSeparator());
+
 		}
-		
+
 		this.chat.add(message);
 		
 		System.out.println(user.getName() + ": " + this.chat.get(this.chat.size() - 1) + System.lineSeparator());
 	}
 
+	public List<User> getUsers() {
+		return users;
+	}
 }
