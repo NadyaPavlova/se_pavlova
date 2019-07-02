@@ -25,7 +25,7 @@ public class Notepad implements TextEditor {
 		System.out.println("Please, enter a path where the file will be created (optional)");
 		String where = requestArgs();
 		
-		String path = "C:\\Users\\nadezhda.pavlova\\Documents\\participant\\bin\\sef\\module13\\activity\\";
+		String path = "C:\\Users\\nadezhda.pavlova\\Documents\\participant\\bin\\sef\\module11\\activity\\";
 		if (where != null && !where.isEmpty()) {
 			
 			if (where.lastIndexOf("\\")!=0)
